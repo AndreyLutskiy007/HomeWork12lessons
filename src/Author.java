@@ -15,8 +15,8 @@ public class Author {
         return this.surNameAuthor;
     }
 
-    public void setNameAuthor(String nameAuthor) {
-        this.nameAuthor = nameAuthor;
+    public void setSurNameAuthor(String surNameAuthor) {
+        this.surNameAuthor = surNameAuthor;
     }
 
 }

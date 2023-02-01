@@ -1,10 +1,13 @@
 public class Book {
     private String bookName;
     private int bookAge;
+    private String author;
 
-    public Book(String bookName, int bookAge) {
+    public Book(String bookName, int bookAge, String author) {
         this.bookName = bookName;
         this.bookAge = bookAge;
+        this.author = author;
+
     }
 
     public String getBookName() {
@@ -19,4 +22,7 @@ public class Book {
         this.bookAge = bookAge;
     }
 
+    public String getAuthor() {
+        return this.author;
+    }
 }
