@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Book {
     private String bookName;
     private int bookAge;
@@ -24,5 +26,27 @@ public class Book {
 
     public Author getAuthor() {
         return this.author;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) return false;
+        if (this == object) return true;
+        if (!object.getClass().equals(Book.class)) return false;
+        Book other = (Book) object;
+        return Objects.equals(this.bookName, other.bookName) &&
+                Objects.equals(this.bookAge, other.bookAge) &&
+                Objects.equals(this.author, other.author);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.bookName, this.bookAge, author);
+    }
+
+    @Override
+    public String toString() {
+        return "Наименование книги: " + this.bookName + ", автор: " + author + ", год издания " + this.bookAge;
     }
 }
