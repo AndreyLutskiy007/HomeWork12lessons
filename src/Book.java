@@ -1,9 +1,9 @@
 public class Book {
     private String bookName;
     private int bookAge;
-    private String author;
+    private Author author;
 
-    public Book(String bookName, int bookAge, String author) {
+    public Book(String bookName, int bookAge, Author author) {
         this.bookName = bookName;
         this.bookAge = bookAge;
         this.author = author;
@@ -22,7 +22,7 @@ public class Book {
         this.bookAge = bookAge;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return this.author;
     }
 }

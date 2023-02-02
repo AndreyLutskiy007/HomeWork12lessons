@@ -5,30 +5,27 @@ public class Main {
         book2();
     }
     public static void book1(){
-
-        Book warAndPeace = new Book("Война и Мир", 1866, "Л.Н. Толстой");
-        System.out.println("warAndPeace.bookName = " + warAndPeace.getBookName());
-        System.out.println("warAndPeace.bookAge = " + warAndPeace.getBookAge());
-        System.out.println("warAndPeace.author = " + warAndPeace.getAuthor());
+        Author author = new Author("Лев", "Толстой");
+        Book warAndPeace = new Book("Война и Мир", 1866, author);
+        System.out.println("warAndPeace.getBookName = " + warAndPeace.getBookName());
+        System.out.println("warAndPeace.getAuthor().getNameAuthor() = " + warAndPeace.getAuthor().getNameAuthor());
+        System.out.println("warAndPeace.getAuthor().getSurNameAuthor() = " + warAndPeace.getAuthor().getSurNameAuthor());
+        System.out.println("warAndPeace.getBookAge() = " + warAndPeace.getBookAge());
         warAndPeace.setBookAge(1867);
         System.out.println("warAndPeace.getBookAge() = " + warAndPeace.getBookAge());
-        Author authorNames = new Author("Лев", "Толстй");
-        System.out.println("authorNames.nameAuthor = " + authorNames.getNameAuthor());
-        System.out.println("authorNames.surNameAuthor = " + authorNames.getSurNameAuthor());
-        authorNames.setSurNameAuthor("Толстой");
-        System.out.println("authorNames.getSurNameAuthor() = " + authorNames.getSurNameAuthor());
     }
     public static void book2() {
-            Book hobbit = new Book("Хоббит", 1938, "Джон Р. Р. Толкин");
-            Author authorHobbit = new Author("Джон", "Толкин");
-            System.out.println("hobbit.getBookName() = " + hobbit.getBookName());
-            System.out.println("hobbit.getBookAge() = " + hobbit.getBookAge());
-            System.out.println("hobbit.getAuthor() = " + hobbit.getAuthor());
+        Author author = new Author("Джон", "Толкин");
+        Book hobbit = new Book("Хоббит", 1938, author);
+        System.out.println("hobbit.getBookName() = " + hobbit.getBookName());
+        System.out.println("hobbit.getAuthor().getNameAuthor() = " + hobbit.getAuthor().getNameAuthor());
+        System.out.println("hobbit.getAuthor().getSurNameAuthor() = " + hobbit.getAuthor().getSurNameAuthor());
+        System.out.println("hobbit.getBookAge() = " + hobbit.getBookAge());
         hobbit.setBookAge(1937);
-            System.out.println("hobbit.getBookAge() = " + hobbit.getBookAge());
-            System.out.println("authorHobbit.getNameAuthor() = " + authorHobbit.getNameAuthor());
-            System.out.println("authorHobbit.getSurNameAuthor() = " + authorHobbit.getSurNameAuthor());
-        }
+        System.out.println("hobbit.getBookAge() = " + hobbit.getBookAge());
+
+
+    }
     }
 
 
